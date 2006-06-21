@@ -1,6 +1,6 @@
 package IsUTF8;
 
-# $Id: IsUTF8.pm 2009 2006-06-20 21:57:02Z heiko $
+# $Id: IsUTF8.pm 2011 2006-06-21 08:23:10Z heiko $
 # $URL: https://svn.schlittermann.de/pub/perl-unicode-detect/trunk/lib/IsUTF8.pm $
 # © 2006 <hs@schlittermann.de>
 #
@@ -14,7 +14,7 @@ IsUTF8 - detects if UTF8 characters are present
 use strict;
 use warnings;
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 use Exporter;
 our @ISA = qw/Exporter/;
@@ -104,6 +104,10 @@ UTF8-Encoding looks like this:
     1110.xx:   1110.0000-1110.1111 0xE0 - 0xEF, followed by 2 bytes
     110x.xx:   1100.0000-1101.1111 0xC0 - 0xDF, followed by 1 byte
     10xx.xx:   1000.0000-1011.1111 0x80 - 0xBF  (following byte as above)
+
+=head1 SEE ALSO
+
+L<Encode::Guess> and L<Encode::Detect>
 
 =head1 BUGS
 

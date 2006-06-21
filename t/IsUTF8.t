@@ -5,10 +5,13 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
-use Test::More tests => 1 + 2 * map { $_ } glob("t/data*");
+use Test::More tests => 2 + 2 * map { $_ } glob("t/data*");
 
 # Test 1
-BEGIN { use_ok('IsUTF8', "isUTF8") };
+BEGIN { use_ok('IsUTF8', 0.2, "isUTF8") };
+
+# Test 2
+is($IsUTF8::VERSION, 0.2, "Version");
 
 #########################
 
@@ -16,6 +19,7 @@ BEGIN { use_ok('IsUTF8', "isUTF8") };
 # its man page ( perldoc Test::More ) for help writing this test script.
 
 {
+
     local @ARGV = glob("t/data*");
     while (<>) {
 	my ($expect) = /^(\w+)/;

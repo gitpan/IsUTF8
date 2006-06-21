@@ -1,9 +1,11 @@
-IsUTF8 version 0.1
+IsUTF8 version 0.2
 ==================
 
 The IsUTF8 modules provides a simple function to check if some given
 string contains at least one UTF8 character sequence.  If you're looking
 for something like UTF8 autodetection, then it's for you :)
+
+It has smaller footprint than other Encode:: packages.
 
 INSTALLATION
 
